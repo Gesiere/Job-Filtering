@@ -1,0 +1,171 @@
+main{
+    .top-background{
+        background-image: url(../assets/images/bg-header-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: $dark-cyan-BG;
+        height: 10rem;
+        @include breakpoint-up(medium){
+            background-image: url(../assets/images/bg-header-desktop.svg);
+        }
+    }
+    .jobs-section{
+        position: relative;
+        background-color: $light-grayish-cyan-BG;
+        padding: 2rem 1rem;
+    }
+    .jobs-container{
+        display: grid;
+        gap: 2rem;
+        @include breakpoint-down(medium){
+            margin-top: 2rem;
+            gap: 4rem;
+        }
+        @include breakpoint-up(small){
+            max-width: 80%;
+            margin: auto;
+        }
+        @include breakpoint-down(medium){
+            &.add-class{
+                margin-top: 5rem;
+
+            }
+        }
+        .card{
+            position: relative;
+            background-color: white;
+            padding: 1rem;
+            border-radius: 2%;
+            box-shadow: 0px 10px 15px -7px rgb(93 164 164 / 50%);
+            @include breakpoint-up(medium){
+                padding: 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            &.featured-border{
+                border-left: 5px solid $dark-cyan-BG;
+            }
+            .hr{
+                @include breakpoint-down(medium){
+                    height: 1px;
+                    background-color: $dark-grayish-cyan;
+                    margin: 1rem 0;
+
+                }
+            }
+            .card-top{
+                @include breakpoint-up(medium){
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                }
+                .logo{
+                    @include breakpoint-down(medium){
+                        width: 4rem;
+                        margin-top: -3rem;
+                    }
+                }
+                .card-properties{
+                    h4{
+                        margin-top: 10px;
+                        transition: $transition;
+                        cursor: pointer;
+                        &:hover{
+                            color: $dark-cyan-BG;
+                        }
+                    }
+                    .card-details-1{
+                        @include breakpoint-down(medium){
+                            margin-top: 1rem;
+                        }
+                        .company{
+                            color: $dark-cyan-BG;
+                            font-weight: 500;
+                        }
+                        .featured,
+                        .new
+                        {
+                            padding: 0.3rem;
+                            text-transform: uppercase;
+                            font-size: 11px;
+                            border-radius: 10px;
+                            color: #fff;
+                        }
+                        .new{
+                            background-color: $dark-cyan-BG;
+                        }
+                        .featured{
+                            background-color: #111;
+                            
+                        }
+                    }
+                    .card-details-2{
+                        span{
+                            color: $dark-grayish-cyan;
+                            margin-top: 4px;
+                        }
+                    }
+                    
+                }
+            }
+            .card-bottom{
+                .filter-button{
+                    background-color: $light-grayish-cyan-tabs;
+                    color: $dark-cyan-BG;
+                    font-weight: 700;
+                    padding: 0.4rem 0.4rem;
+                    border-radius: 2px;
+                    vertical-align: middle;
+                    transition: $transition;
+                    &:hover{
+                        background-color: $dark-cyan-BG;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .filters{
+        position: absolute;
+        top: -60px;
+        margin-bottom: 3rem;
+        right: 1rem;
+        left: 1rem;
+        padding: 1rem;
+        background-color: #fff;
+        box-shadow: 0px 10px 15px -7px rgb(93 164 164 / 50%);
+        @include breakpoint-up(small){
+            right: 11%;
+            left: 11%;
+        }
+        .filter{
+            color: $dark-cyan-BG;
+            background-color: $light-grayish-cyan-BG;
+            font-weight: 700;
+            span{
+                padding: 0.4rem;
+            }
+            button{
+                background-color: $dark-cyan-BG;
+                color: #fff;
+                padding: 0.5rem;
+                transition: $transition;
+                &:hover{
+                    background-color: $very-dark-grayish-cyan;
+                }
+            }
+        }
+    }
+    .clear{
+        color: $dark-cyan-BG;
+        font-weight: 700;
+        font-size: 1rem;
+        transition: $transition;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}

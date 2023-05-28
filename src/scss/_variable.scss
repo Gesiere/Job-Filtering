@@ -1,0 +1,33 @@
+$dark-cyan-BG: hsl(180, 29%, 50%);
+$light-grayish-cyan-BG: hsl(180, 52%, 96%);
+$light-grayish-cyan-tabs: hsl(180, 31%, 95%);
+$dark-grayish-cyan: hsl(180, 8%, 52%);
+$very-dark-grayish-cyan: hsl(180, 14%, 20%);
+$transition: all 0.4s ease-in-out;
+
+.flex{
+    display: flex;
+    align-items: center;
+    
+    &-jc-sb{
+        justify-content: space-between;
+    }
+    &.gap-1{
+        gap: 0.5rem;
+    }
+    &.gap-2{
+        gap: 1rem;
+    }
+    &-wrap{
+        flex-wrap: wrap;
+    }
+ 
+}
+
+.mb{
+    margin-bottom: 0.5rem;
+}
+
+.mt{
+    margin-top: 0.5rem;
+}
